@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StarredPosts</string>
+    <string name="tab_text_1">All</string>
+    <string name="tab_text_2">Favorites</string>
+    <string name="description">Description</string>
+    <string name="user">User</string>
+    <string name="comments">COMMENTS</string>
+</resources>

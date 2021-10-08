@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/new_post_dot_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/icon_padding"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_notification_dot" />
+
+    <TextView
+        android:id="@+id/post_title_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut odio tempus, rutrum elit eget, scelerisque mauris. Sed dignissim dictum justo a vulputate."
+        app:layout_constraintStart_toEndOf="@id/new_post_dot_image"
+        app:layout_constraintEnd_toStartOf="@id/favorite_post_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="10dp"
+        android:maxLines="2"
+        android:gravity="center_vertical" />
+
+    <ImageView
+        android:id="@+id/favorite_post_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/post_title_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/icon_padding"
+        android:src="@drawable/ic_baseline_star_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

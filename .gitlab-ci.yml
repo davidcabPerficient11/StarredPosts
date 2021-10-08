@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+
+image: andresmaca/android_build_container:1.0
+
+assembleDebug:
+  stage: build
+  tags: [ android ]
+  script:
+    - gradle clean assembleDebug --stacktrace
+
+instrumentationTest:
+  stage: test
+  tags: [ android ]
+  script:
+    - gradle connectedAndroidTest
+
+
